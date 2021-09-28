@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link rel="apple-touch-icon" href="images/nexbot-icon.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/nexbot-icon@3x.png">
+		<title>Nexbot</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+		<script type="text/javascript">
+			(function(document,navigator,standalone) {
+				// prevents links from apps from oppening in mobile safari
+				// this javascript must be the first script in your <head>
+				if ((standalone in navigator) && navigator[standalone]) {
+					var curnode, location=document.location, stop=/^(a|html)$/i;
+					document.addEventListener('click', function(e) {
+						curnode=e.target;
+						while (!(stop).test(curnode.nodeName)) {
+							curnode=curnode.parentNode;
+						}
+						// Condidions to do this only on links to your own app
+						// if you want all links, use if('href' in curnode) instead.
+						if(
+							'href' in curnode && // is a link
+							(chref=curnode.href).replace(location.href,'').indexOf('#') && // is not an anchor
+							(	!(/^[a-z\+\.\-]+:/i).test(chref) ||                       // either does not have a proper scheme (relative links)
+								chref.indexOf(location.protocol+'//'+location.host)===0 ) // or is in the same protocol and domain
+						) {
+							e.preventDefault();
+							location.href = curnode.href;
+						}
+					},false);
+				}
+			})(document,window.navigator,'standalone');
+		</script>
+	</head>
+	<body class="menu">
+		<header>
+			<span class="logo">
+				<svg width="80" height="80" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title>Bot - Outline</title><desc>Created with Sketch.</desc><g fill="none"><rect fill="#2681DD" width="32" height="32" rx="2"/><path d="M25.815 8.67c1.376 1.79 2.185 3.973 2.185 6.33v7c0 3.314-5.373 6-12 6s-12-2.686-12-6v-7c0-2.374.82-4.573 2.216-6.37l-2.509-2.509c-.391-.391-.391-1.024 0-1.414.391-.391 1.024-.391 1.414 0l2.457 2.457c2.166-1.957 5.14-3.164 8.422-3.164 3.3 0 6.29 1.221 8.459 3.198l2.491-2.491c.391-.391 1.024-.391 1.414 0 .391.391.391 1.024 0 1.414l-2.549 2.549zm-14.315 4.33c-2.485 0-4.5 2.015-4.5 4.5s2.015 4.5 4.5 4.5h9c2.485 0 4.5-2.015 4.5-4.5s-2.015-4.5-4.5-4.5h-9zm1.5 4.5c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5 1.5h-1c0-1.381 1.119-2.5 2.5-2.5s2.5 1.119 2.5 2.5h-1zm9 0c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5 1.5h-1c0-1.381 1.119-2.5 2.5-2.5s2.5 1.119 2.5 2.5h-1z" fill="#fff"/></g></svg>
+			</span>
+			<h1>Welcome</h1>
+			<p class="note">For a better experience, click the share button and select <b>Add to Home Screen</b>, then launch from the Home Screen.</p>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="browser.html?p1=approval">Approval</a></li>
+				<li><a href="browser.html?p1=expense">Create an expenses</a></li>
+				<li><a class="disabled">Create expense from a picture</a></li>
+				<li><a class="disabled">Add attendees</a></li>
+				<li><a class="disabled">Feature Onboarding</a></li>
+				<li><a class="disabled">Feature reminder</a></li>
+				<li><a class="disabled">Timesheets</a></li>
+				<li><a class="disabled">Create a Report</a></li>
+				<li><a class="disabled">Help in adding items</a></li>
+			</ul>
+		</nav>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>Nexbot</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bot.css"/>
+	</head>
+	<body>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script type="application/javascript" src="dist/siribro.js"></script>
+		
+		<script type="application/javascript">
+			$(function() {
+				siribro.loadMD("data/approval.md")
+					.setOptions({"isPersistHistory":false})
+					.addFunction("checkOnServer",function(){
+						$.ajax({ })
+					.done(function( msg ) {
+						siribro.next(msg); // Resume the discussion flow and provide a param for the next step (if needed)
+					});
+				})
+				.start("Beginning");
+			});
+		</script>
+	</body>
+</html>

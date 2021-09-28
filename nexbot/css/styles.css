@@ -1,0 +1,24 @@
+html, form, input			{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; font-size: 16px; }
+body						{ background-color: rgb(243, 244, 245); margin: 0; padding: 0; }
+
+/* Fake browser */
+body.fake 					{ background: #fff; margin: 0; padding: 0; }
+.fake header				{ background: #2681DD; border-bottom: solid 1px #ccc; width: 100%; height: 44px; position: fixed; top: 0; left: 0; display: table; }
+.fake header .back,
+.fake header .right,
+.fake header .title			{ display: table-cell; }
+.fake header .title			{ text-align: center; font-weight: 700; font-size: 17px; line-height: 20px; margin: 12px 0; vertical-align: middle; color: white; text-transform: capitalize; }
+.fake header .back a		{ background-image: url(../images/Back@2x.png); background-size: cover; background-repeat: no-repeat; width: 100px; height: 44px; display: block; float: left; }
+.fake header .right a		{ background-image: url(../images/Right@2x.png); background-size: cover; background-repeat: no-repeat; width: 100px; height: 44px; display: block; float: right; }
+.fake iframe				{ width: 100%; height: calc(100vh - 45px); margin: 0; position: absolute; top: 45px; left: 0; right: 0; bottom: 0; display: inline-block; }
+
+/* Menu */
+body.menu					{ padding: 2rem; }
+.menu h1					{ margin: 0; display: block; text-align: center; }
+.menu .note					{ font-style: italic; }
+.menu .logo					{ width: 100%; display: block; margin-bottom: 1rem; text-align: center; }
+
+nav ul						{ margin: 0; margin-top: 3rem; padding: 0; list-style-type: none; }
+nav ul li					{ padding: 0; margin-bottom: 1rem; }
+nav ul li a					{ background: #2681DD; border-radius: .375rem; padding: .75rem 1rem; text-decoration: none; color: #fff; display: block; font-weight: bold; }
+nav ul li a.disabled		{ background: #ddd; }

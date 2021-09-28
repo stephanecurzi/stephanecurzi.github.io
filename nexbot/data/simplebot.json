@@ -1,0 +1,133 @@
+[
+    {
+        "type":"dialog_bloc",
+        "name":"Beginning",
+        "steps":[
+            {
+                "type":"pause",
+                "millisecond":"1000"
+            },
+            {
+                "type":"sentence",
+                "text":"Hello, how are you?"
+            },
+            {
+                "type":"input",
+                "data":"mood"
+            },
+            {
+                "type":"sentence",
+                "text":"My name is Stephane, I would like to introduce our products"
+            },
+            {
+                "type":"sentence",
+                "text":"Shall I continue?"
+            },
+            {
+                "type":"input",
+                "data":""
+            },
+            {
+                "type":"optionGroup",
+                "options":[
+                    {
+                        "type":"option",
+                        "value":"   [Yes]    ",
+                        "steps":[
+                            {
+                                "type":"sentence",
+                                "text":"Cool ;)"
+                            },
+                            {
+                                "type":"sentence",
+                                "text":"We are a small company based in Montreal"
+                            },
+                            {
+                                "type":"sentence",
+                                "text":"We sell or rent appartment downtown"
+                            },
+                            {
+                                "type":"sentence",
+                                "text":"Where are you living?"
+                            },
+                            {
+                                "type":"input",
+                                "data":"city"
+                            },
+                            {
+                                "type":"optionGroup",
+                                "options":[
+                                    {
+                                        "type":"option",
+                                        "value":"Montreal | downtown",
+                                        "steps":[
+                                            {
+                                                "type":"sentence",
+                                                "text":"Really ? that's fantastic, let's have a beer!"
+                                            },
+                                            {
+                                                "type":"sentence",
+                                                "text":"..."
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type":"option",
+                                        "value":"Other",
+                                        "steps":[
+                                            {
+                                                "type":"sentence",
+                                                "text":"Oh I see."
+                                            },
+                                            {
+                                                "type":"sentence",
+                                                "text":"Maybe we can stay in touch!"
+                                            },
+                                            {
+                                                "type":"goto",
+                                                "value":"Finish"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type":"option",
+                        "value":"No",
+                        "steps":[
+                            {
+                                "type":"sentence",
+                                "text":"Ok no prob. Let me know if you need anything ;)"
+                            },
+                            {
+                                "type":"goto",
+                                "value":"Finish"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type":"dialog_bloc",
+        "name":"Finish",
+        "steps":[
+            {
+                "type":"sentence",
+                "text":"Have a great day !"
+            }
+        ]
+    },
+    {
+        "type":"value_bloc",
+        "name":"[Yes]",
+        "values":[
+            "yes",
+            "sure",
+            "ok"
+        ]
+    }
+]

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="44px" viewBox="0 0 100 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>Back</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-7" transform="translate(0.000000, -20.000000)" fill="#FFFFFF">
+            <g id="Bars/Navigation/Navigation-Bar">
+                <g id="Overrides/Navigation-Bar/Left/Back-Button" transform="translate(0.000000, 20.000000)">
+                    <g id="Group" transform="translate(8.000000, 11.000000)">
+                        <text id="Back" font-family="SFUIText-Regular, SF UI Text" font-size="17" font-weight="normal" letter-spacing="-0.409999996">
+                            <tspan x="19" y="17">Home</tspan>
+                        </text>
+                        <polygon id="Back-Chevron" points="0.5 11 11 0.5 13 2.5 4.5 11 13 19.5 11 21.5"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
