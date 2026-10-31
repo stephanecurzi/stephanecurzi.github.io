@@ -1,0 +1,44 @@
+---
+# Remplace la feuille de style de minima : mêmes polices et couleur que la page d'accueil.
+---
+
+@font-face {
+  font-family: 'stevie-bold';
+  src: url('/typo/steviesans_bold-webfont.woff2') format('woff2'),
+       url('/typo/steviesans_bold-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'adrianetext';
+  src: url('/typo/adrianetext-rg-webfont.woff2') format('woff2'),
+       url('/typo/adrianetext-rg-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'adrianetext';
+  font-style: italic;
+  src: url('/typo/adrianetext-it-webfont.woff2') format('woff2'),
+       url('/typo/adrianetext-it-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'adrianetext';
+  font-weight: bold;
+  src: url('/typo/adrianetext-bd-webfont.woff2') format('woff2'),
+       url('/typo/adrianetext-bd-webfont.woff') format('woff');
+}
+
+$base-font-family: 'adrianetext', Georgia, serif;
+$base-font-size: 18px;
+$text-color: #555;
+$brand-color: rgb(254, 80, 0);
+$content-width: 760px;
+
+@import "minima";
+
+h1, h2, h3, h4, h5, h6,
+.site-title, .post-title, .post-list-heading {
+  font-family: 'stevie-bold', sans-serif;
+  font-weight: normal;
+  color: $brand-color;
+  letter-spacing: -0.05rem;
+}
+.site-title, .site-title:visited { color: $brand-color; }
+.site-header { border-top-color: $brand-color; }

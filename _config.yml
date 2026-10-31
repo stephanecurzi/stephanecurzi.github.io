@@ -1,0 +1,26 @@
+title: stephanecurzi.me
+description: Textes et photos de Stéphane Curzi
+author: Stéphane Curzi
+lang: fr
+url: https://stephanecurzi.me
+baseurl: ""
+
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+permalink: /blog/:year/:month/:title/
+header_pages:
+  - blog/index.html
+
+minima:
+  date_format: "%Y-%m-%d"
+
+# Tous les articles utilisent le gabarit « post » de minima.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
